@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>UBold - Responsive Admin Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Plugins css -->
+        <link href="assets/libs/dropzone/dropzone.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- third party css -->
+        <link href="assets/libs/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+
+        <!-- Footable css -->
+        <link href="assets/libs/footable/footable.core.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Loading button css -->
+        <link href="assets/libs/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html')
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                                            <li class="breadcrumb-item active">Text Grading</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Text Grading</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+                        <div class="row">
+                            <div class="col-12 order-xl-1 order-2">
+                                <div class="card mb-2">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Text List</h4>
+                                        <p class="text-muted font-13 mb-4">
+                                            <!--DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction
+                                            function:
+                                            <code>$().DataTable();</code>.-->
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <form class="form-inline">
+                                                    <div class="form-group">
+                                                        <label for="inputPassword2" class="sr-only">Search</label>
+                                                        <input type="search" class="form-control" id="inputPassword2" placeholder="Search...">
+                                                    </div>
+                                                    <div class="form-group mx-sm-3">
+                                                        <label for="status-select" class="mr-2">Sort By</label>
+                                                        <select class="custom-select" id="status-select">
+                                                            <option selected="">All</option>
+                                                            <option value="1">Name</option>
+                                                            <option value="2">Time</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <!--<div class="text-lg-right mt-3 mt-lg-0">
+                                                    <button type="button" class="btn btn-success waves-effect waves-light mr-1"><i class="mdi mdi-settings"></i></button>
+                                                    <a href="#custom-modal" class="btn btn-danger waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayColor="#98a6ad"><i class="mdi mdi-plus-circle mr-1"></i> Add New</a>
+                                                </div>-->
+                                            </div><!-- end col-->
+                                        </div> <!-- end row -->
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Rhona Davidson</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Cedric Kelly</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Tiger Nixon</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Airi Satou</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Jena Gaines</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <!--<div class="text-center my-4">
+                                    <a href="javascript:void(0);" class="text-danger"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load more </a>
+                                </div>-->
+
+                            </div> <!-- end col -->
+
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- Plugins js -->
+        <script src="assets/libs/dropzone/dropzone.min.js"></script>
+        <script src="assets/libs/dropify/dropify.min.js"></script>
+
+        <!-- Loading buttons js -->
+        <script src="assets/libs/ladda/spin.js"></script>
+        <script src="assets/libs/ladda/ladda.js"></script>
+
+        <!-- Table Editable plugin-->
+        <script src="assets/libs/jquery-tabledit/jquery.tabledit.min.js"></script>
+
+        <!-- Table editable init-->
+        <script src="assets/js/pages/tabledit.init.js"></script>
+
+        <!-- Buttons init js-->
+        <script src="assets/js/pages/loading-btn.init.js"></script>
+
+        <!-- third party js -->
+        <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.bootstrap4.js"></script>
+        <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables/buttons.flash.min.js"></script>
+        <script src="assets/libs/datatables/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.select.min.js"></script>
+        <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+        <!-- third party js ends -->
+
+        <!-- Datatables init -->
+        <script src="assets/js/pages/datatables.init.js"></script>
+
+        <!-- Init js-->
+        <script src="assets/js/pages/form-fileuploads.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>
