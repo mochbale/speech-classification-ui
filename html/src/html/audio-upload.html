@@ -14,14 +14,11 @@
         <link href="assets/libs/dropzone/dropzone.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/libs/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
 
-        <!-- third party css -->
-        <link href="assets/libs/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
-
-        <!-- Footable css -->
-        <link href="assets/libs/footable/footable.core.min.css" rel="stylesheet" type="text/css" />
-
         <!-- Loading button css -->
         <link href="assets/libs/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Bootstrap Tables css -->
+        <link href="assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -92,147 +89,61 @@
                             </div><!-- end col -->
                         </div>
                         <!-- end row -->
-
+                   
                         <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="header-title">Upload History</h4>
-                                        <p class="text-muted font-13 mb-4">
-                                            <!--DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction
-                                            function:
-                                            <code>$().DataTable();</code>.-->
-                                        </p>
 
-                                        <table id="basic-datatable" class="table dt-responsive nowrap">
+                            <div class="col-lg-12">
+                                <div class="card-box">
+                                    <h4 class="header-title">Upload History</h4>
+                                    <p class="sub-header">
+                                    </p>
+
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
                                             <thead>
-                                                <tr>
-                                                    <th>Start date</th>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Office</th>
-                                                    <th>Age</th>
-                                                    <th data-sort-ignore="true">Edit</th>
-                                                    <th data-sort-ignore="true">Delete</th>
-                                                </tr>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Username</th>
+                                                <th data-sort-ignore="true">Edit</th>
+                                                <th data-sort-ignore="true">Delete</th>
+                                            </tr>
                                             </thead>
-                                        
                                             <tbody>
-                                                <tr>
-                                                    <td>2011/04/25</td>
-                                                    <td>Tiger Nixon</td>
-                                                    <td>System Architect</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>61</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2011/07/25</td>
-                                                    <td>Garrett Winters</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                    <td>63</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2009/01/12</td>
-                                                    <td>Ashton Cox</td>
-                                                    <td>Junior Technical Author</td>
-                                                    <td>San Francisco</td>
-                                                    <td>66</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2012/03/29</td>
-                                                    <td>Cedric Kelly</td>
-                                                    <td>Senior Javascript Developer</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>22</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2008/11/28</td>
-                                                    <td>Airi Satou</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                    <td>33</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2012/12/02</td>
-                                                    <td>Brielle Williamson</td>
-                                                    <td>Integration Specialist</td>
-                                                    <td>New York</td>
-                                                    <td>61</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>                                                </tr>
-                                                <tr>
-                                                    <td>2012/08/06</td>
-                                                    <td>Herrod Chandler</td>
-                                                    <td>Sales Assistant</td>
-                                                    <td>San Francisco</td>
-                                                    <td>59</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2010/10/14</td>
-                                                    <td>Rhona Davidson</td>
-                                                    <td>Integration Specialist</td>
-                                                    <td>Tokyo</td>
-                                                    <td>55</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>                                                </tr>
-                                                <tr>
-                                                    <td>2009/09/15</td>
-                                                    <td>Colleen Hurst</td>
-                                                    <td>Javascript Developer</td>
-                                                    <td>San Francisco</td>
-                                                    <td>39</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2008/12/13</td>
-                                                    <td>Sonya Frost</td>
-                                                    <td>Software Engineer</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>23</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2008/12/19</td>
-                                                    <td>Jena Gaines</td>
-                                                    <td>Office Manager</td>
-                                                    <td>London</td>
-                                                    <td>30</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2013/03/03</td>
-                                                    <td>Quinn Flynn</td>
-                                                    <td>Support Lead</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>22</td>
-                                                    <td><button class="btn btn-success mdi mdi-pencil" style="right: 50%"></button></td>
-                                                    <td><button class="btn btn-danger mdi mdi-close" style="right: 50%"></button></td>
-                                                </tr>
-                                                
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td><button class="btn btn-success"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><button class="btn btn-danger"><span class="mdi mdi-close"></span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td><button class="btn btn-success"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><button class="btn btn-danger"><span class="mdi mdi-close"></span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td colspan="2">Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td><button class="btn btn-success"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><button class="btn btn-danger"><span class="mdi mdi-close"></span></button></td>
+                                            </tr>
                                             </tbody>
                                         </table>
+                                    </div> <!-- end table-responsive-->
+        
+                                </div> <!-- end card-box -->
+                            </div> <!-- end col -->
 
-                                    </div> <!-- end card body-->
-                                </div> <!-- end card -->
-                            </div><!-- end col-->
                         </div>
                         <!-- end row-->
+
 
                     </div> <!-- container -->
 
@@ -263,33 +174,12 @@
         <script src="assets/libs/ladda/spin.js"></script>
         <script src="assets/libs/ladda/ladda.js"></script>
 
-        <!-- Table Editable plugin-->
-        <script src="assets/libs/jquery-tabledit/jquery.tabledit.min.js"></script>
-
-        <!-- Table editable init-->
-        <script src="assets/js/pages/tabledit.init.js"></script>
 
         <!-- Buttons init js-->
         <script src="assets/js/pages/loading-btn.init.js"></script>
 
-        <!-- third party js -->
-        <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
-        <script src="assets/libs/datatables/dataTables.bootstrap4.js"></script>
-        <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
-        <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
-        <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
-        <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
-        <script src="assets/libs/datatables/buttons.html5.min.js"></script>
-        <script src="assets/libs/datatables/buttons.flash.min.js"></script>
-        <script src="assets/libs/datatables/buttons.print.min.js"></script>
-        <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
-        <script src="assets/libs/datatables/dataTables.select.min.js"></script>
-        <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
-        <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
-        <!-- third party js ends -->
-
-        <!-- Datatables init -->
-        <script src="assets/js/pages/datatables.init.js"></script>
+        <!-- Bootstrap Tables js -->
+        <script src="assets/libs/bootstrap-table/bootstrap-table.min.js"></script>
 
         <!-- Init js-->
         <script src="assets/js/pages/form-fileuploads.init.js"></script>
