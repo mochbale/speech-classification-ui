@@ -17,6 +17,9 @@
         <!-- Loading button css -->
         <link href="assets/libs/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
 
+        <!-- Bootstrap Tables css -->
+        <link href="assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+
         <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -215,7 +218,7 @@
                                 <div class="page-title-box">
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                                             <li class="breadcrumb-item active">Audio Upload</li>
                                         </ol>
                                     </div>
@@ -252,7 +255,62 @@
                             </div><!-- end col -->
                         </div>
                         <!-- end row -->
-                        
+                   
+                        <div class="row">
+
+                            <div class="col-lg-12">
+                                <div class="card-box">
+                                    <h4 class="header-title">Upload History</h4>
+                                    <p class="sub-header">
+                                    </p>
+
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Username</th>
+                                                <th data-sort-ignore="true">Edit</th>
+                                                <th data-sort-ignore="true">Delete</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td><button class="btn btn-success"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><button class="btn btn-danger"><span class="mdi mdi-close"></span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td><button class="btn btn-success"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><button class="btn btn-danger"><span class="mdi mdi-close"></span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td colspan="2">Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td><button class="btn btn-success"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><button class="btn btn-danger"><span class="mdi mdi-close"></span></button></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> <!-- end table-responsive-->
+        
+                                </div> <!-- end card-box -->
+                            </div> <!-- end col -->
+
+                        </div>
+                        <!-- end row-->
+
+
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -383,9 +441,6 @@
         </div>
         <!-- /Right-bar -->
 
-        <!-- Right bar overlay-->
-        <div class="rightbar-overlay"></div>
-
         <!-- Vendor js -->
         <script src="assets/js/vendor.min.js"></script>
 
@@ -397,8 +452,12 @@
         <script src="assets/libs/ladda/spin.js"></script>
         <script src="assets/libs/ladda/ladda.js"></script>
 
+
         <!-- Buttons init js-->
         <script src="assets/js/pages/loading-btn.init.js"></script>
+
+        <!-- Bootstrap Tables js -->
+        <script src="assets/libs/bootstrap-table/bootstrap-table.min.js"></script>
 
         <!-- Init js-->
         <script src="assets/js/pages/form-fileuploads.init.js"></script>
