@@ -11,7 +11,17 @@
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- Plugins css -->
-        <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/dropzone/dropzone.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- third party css -->
+        <link href="assets/libs/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+
+        <!-- Footable css -->
+        <link href="assets/libs/footable/footable.core.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Loading button css -->
+        <link href="assets/libs/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -210,465 +220,193 @@
                             <div class="col-12">
                                 <div class="page-title-box">
                                     <div class="page-title-right">
-                                        <form class="form-inline">
-                                            <div class="form-group">
-                                                <div class="input-group input-group-sm">
-                                                    <input type="text" class="form-control" id="dash-daterange">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text bg-blue border-blue text-white">
-                                                            <i class="mdi mdi-calendar-range font-13"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="javascript: void(0);" class="btn btn-blue btn-sm ml-2">
-                                                <i class="mdi mdi-autorenew"></i>
-                                            </a>
-                                            <a href="javascript: void(0);" class="btn btn-blue btn-sm ml-1">
-                                                <i class="mdi mdi-filter-variant"></i>
-                                            </a>
-                                        </form>
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                                            <li class="breadcrumb-item active">Text Grading</li>
+                                        </ol>
                                     </div>
-                                    <h4 class="page-title">Dashboard</h4>
+                                    <h4 class="page-title">Text Grading</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
 
                         <div class="row">
-                            <div class="col-md-6 col-xl-3">
-                                <div class="widget-rounded-circle card-box">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-soft-primary border-primary border">
-                                                <i class="fe-heart font-22 avatar-title text-primary"></i>
+                            <div class="col-12 order-xl-1 order-2">
+                                <div class="card mb-2">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Text List</h4>
+                                        <p class="text-muted font-13 mb-4">
+                                            <!--DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction
+                                            function:
+                                            <code>$().DataTable();</code>.-->
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <form class="form-inline">
+                                                    <div class="form-group">
+                                                        <label for="inputPassword2" class="sr-only">Search</label>
+                                                        <input type="search" class="form-control" id="inputPassword2" placeholder="Search...">
+                                                    </div>
+                                                    <div class="form-group mx-sm-3">
+                                                        <label for="status-select" class="mr-2">Sort By</label>
+                                                        <select class="custom-select" id="status-select">
+                                                            <option selected="">All</option>
+                                                            <option value="1">Name</option>
+                                                            <option value="2">Time</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
                                             </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-right">
-                                                <h3 class="mt-1">$<span data-plugin="counterup">58,947</span></h3>
-                                                <p class="text-muted mb-1 text-truncate">Total Revenue</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div> <!-- end widget-rounded-circle-->
-                            </div> <!-- end col-->
+                                            <div class="col-lg-4">
+                                                <!--<div class="text-lg-right mt-3 mt-lg-0">
+                                                    <button type="button" class="btn btn-success waves-effect waves-light mr-1"><i class="mdi mdi-settings"></i></button>
+                                                    <a href="#custom-modal" class="btn btn-danger waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayColor="#98a6ad"><i class="mdi mdi-plus-circle mr-1"></i> Add New</a>
+                                                </div>-->
+                                            </div><!-- end col-->
+                                        </div> <!-- end row -->
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
 
-                            <div class="col-md-6 col-xl-3">
-                                <div class="widget-rounded-circle card-box">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-soft-success border-success border">
-                                                <i class="fe-shopping-cart font-22 avatar-title text-success"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-right">
-                                                <h3 class="mt-1"><span data-plugin="counterup">127</span></h3>
-                                                <p class="text-muted mb-1 text-truncate">Today's Sales</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div> <!-- end widget-rounded-circle-->
-                            </div> <!-- end col-->
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Rhona Davidson</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
 
-                            <div class="col-md-6 col-xl-3">
-                                <div class="widget-rounded-circle card-box">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-soft-info border-info border">
-                                                <i class="fe-bar-chart-line- font-22 avatar-title text-info"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-right">
-                                                <h3 class="mt-1"><span data-plugin="counterup">0.58</span>%</h3>
-                                                <p class="text-muted mb-1 text-truncate">Conversion</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div> <!-- end widget-rounded-circle-->
-                            </div> <!-- end col-->
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="widget-rounded-circle card-box">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-soft-warning border-warning border">
-                                                <i class="fe-eye font-22 avatar-title text-warning"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-right">
-                                                <h3 class="mt-1"><span data-plugin="counterup">78.41</span>k</h3>
-                                                <p class="text-muted mb-1 text-truncate">Today's Visits</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div> <!-- end widget-rounded-circle-->
-                            </div> <!-- end col-->
-                        </div>
-                        <!-- end row-->
-
-                        <div class="row">
-                            <div class="col-xl-4">
-                                <div class="card-box">
-                                    <h4 class="header-title mb-3">Total Revenue</h4>
-
-                                    <div class="widget-chart text-center" dir="auto">
-                                        <input data-plugin="knob" data-width="160" data-height="160" data-linecap=round data-bgColor="#525e6b" data-fgColor="#f1556c" value="60" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".12"/>
-                                        <h5 class="text-muted mt-3">Total sales made today</h5>
-                                        <h2>$178</h2>
-
-                                        <p class="text-muted w-75 mx-auto sp-line-2">Traditional heading elements are designed to work best in the meat of your page content.</p>
-
-                                        <div class="row mt-3">
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Target</p>
-                                                <h4><i class="fe-arrow-down text-danger mr-1"></i>$7.8k</h4>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Last week</p>
-                                                <h4><i class="fe-arrow-up text-success mr-1"></i>$1.4k</h4>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Last Month</p>
-                                                <h4><i class="fe-arrow-down text-danger mr-1"></i>$15k</h4>
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
                                             </div>
                                         </div>
                                         
-                                    </div>
-                                </div> <!-- end card-box -->
-                            </div> <!-- end col-->
-
-                            <div class="col-xl-8">
-                                <div class="card-box">
-                                    <h4 class="header-title mb-3">Sales Analytics</h4>
-
-                                    <div id="sales-analytics" class="flot-chart mt-4 pt-1" style="height: 375px;"></div>
-                                </div> <!-- end card-box -->
-                            </div> <!-- end col-->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card-box">
-                                    <h4 class="header-title mb-3">Top 5 Users Balances</h4>
-
-                                    <div class="table-responsive">
-                                        <table class="table table-borderless table-hover table-centered m-0">
-
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th colspan="2">Profile</th>
-                                                    <th>Currency</th>
-                                                    <th>Balance</th>
-                                                    <th>Reserved in orders</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="width: 36px;">
-                                                        <img src="assets/images/users/user-2.jpg" alt="contact-img" title="contact-img" class="rounded-circle avatar-sm" />
-                                                    </td>
-    
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Tomaslau</h5>
-                                                        <p class="mb-0 text-muted"><small>Member Since 2017</small></p>
-                                                    </td>
-    
-                                                    <td>
-                                                        <i class="mdi mdi-currency-btc text-primary"></i> BTC
-                                                    </td>
-    
-                                                    <td>
-                                                        0.00816117 BTC
-                                                    </td>
-    
-                                                    <td>
-                                                        0.00097036 BTC
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-plus"></i></a>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-danger"><i class="mdi mdi-minus"></i></a>
-                                                    </td>
-                                                </tr>
-    
-                                                <tr>
-                                                    <td style="width: 36px;">
-                                                        <img src="assets/images/users/user-3.jpg" alt="contact-img" title="contact-img" class="rounded-circle avatar-sm" />
-                                                    </td>
-    
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Erwin E. Brown</h5>
-                                                        <p class="mb-0 text-muted"><small>Member Since 2017</small></p>
-                                                    </td>
-    
-                                                    <td>
-                                                        <i class="mdi mdi-currency-eth text-primary"></i> ETH
-                                                    </td>
-    
-                                                    <td>
-                                                        3.16117008 ETH
-                                                    </td>
-    
-                                                    <td>
-                                                        1.70360009 ETH
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-plus"></i></a>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-danger"><i class="mdi mdi-minus"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 36px;">
-                                                        <img src="assets/images/users/user-4.jpg" alt="contact-img" title="contact-img" class="rounded-circle avatar-sm" />
-                                                    </td>
-    
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Margeret V. Ligon</h5>
-                                                        <p class="mb-0 text-muted"><small>Member Since 2017</small></p>
-                                                    </td>
-    
-                                                    <td>
-                                                        <i class="mdi mdi-currency-eur text-primary"></i> EUR
-                                                    </td>
-    
-                                                    <td>
-                                                        25.08 EUR
-                                                    </td>
-    
-                                                    <td>
-                                                        12.58 EUR
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-plus"></i></a>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-danger"><i class="mdi mdi-minus"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 36px;">
-                                                        <img src="assets/images/users/user-5.jpg" alt="contact-img" title="contact-img" class="rounded-circle avatar-sm" />
-                                                    </td>
-    
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Jose D. Delacruz</h5>
-                                                        <p class="mb-0 text-muted"><small>Member Since 2017</small></p>
-                                                    </td>
-    
-                                                    <td>
-                                                        <i class="mdi mdi-currency-cny text-primary"></i> CNY
-                                                    </td>
-    
-                                                    <td>
-                                                        82.00 CNY
-                                                    </td>
-    
-                                                    <td>
-                                                        30.83 CNY
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-plus"></i></a>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-danger"><i class="mdi mdi-minus"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 36px;">
-                                                        <img src="assets/images/users/user-6.jpg" alt="contact-img" title="contact-img" class="rounded-circle avatar-sm" />
-                                                    </td>
-    
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Luke J. Sain</h5>
-                                                        <p class="mb-0 text-muted"><small>Member Since 2017</small></p>
-                                                    </td>
-    
-                                                    <td>
-                                                        <i class="mdi mdi-currency-btc text-primary"></i> BTC
-                                                    </td>
-    
-                                                    <td>
-                                                        2.00816117 BTC
-                                                    </td>
-    
-                                                    <td>
-                                                        1.00097036 BTC
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-plus"></i></a>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-danger"><i class="mdi mdi-minus"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div> <!-- end col -->
-
-                            <div class="col-xl-6">
-                                <div class="card-box">
-                                    <h4 class="header-title mb-3">Revenue History</h4>
-
-                                    <div class="table-responsive">
-                                        <table class="table table-borderless table-hover table-centered m-0">
-
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th>Marketplaces</th>
-                                                    <th>Date</th>
-                                                    <th>Payouts</th>
-                                                    <th>Status</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Themes Market</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Oct 15, 2018
-                                                    </td>
-    
-                                                    <td>
-                                                        $5848.68
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge bg-soft-warning text-warning">Upcoming</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Freelance</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Oct 12, 2018
-                                                    </td>
-    
-                                                    <td>
-                                                        $1247.25
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge bg-soft-success text-success">Paid</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Share Holding</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Oct 10, 2018
-                                                    </td>
-    
-                                                    <td>
-                                                        $815.89
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge bg-soft-success text-success">Paid</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Envato's Affiliates</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Oct 03, 2018
-                                                    </td>
-    
-                                                    <td>
-                                                        $248.75
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge bg-soft-danger text-danger">Overdue</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Marketing Revenue</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Sep 21, 2018
-                                                    </td>
-    
-                                                    <td>
-                                                        $978.21
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge bg-soft-warning text-warning">Upcoming</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Advertise Revenue</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Sep 15, 2018
-                                                    </td>
-    
-                                                    <td>
-                                                        $358.10
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge bg-soft-success text-success">Paid</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- end .table-responsive-->
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
                                 </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Cedric Kelly</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Tiger Nixon</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Airi Satou</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Jena Gaines</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='/text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <!--<div class="text-center my-4">
+                                    <a href="javascript:void(0);" class="text-danger"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load more </a>
+                                </div>-->
+
                             </div> <!-- end col -->
+
                         </div>
                         <!-- end row -->
-                        
+
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -799,26 +537,49 @@
         </div>
         <!-- /Right-bar -->
 
-        <!-- Right bar overlay-->
-        <div class="rightbar-overlay"></div>
-
         <!-- Vendor js -->
         <script src="assets/js/vendor.min.js"></script>
 
-        <!-- Plugins js-->
-        <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
-        <script src="assets/libs/jquery-knob/jquery.knob.min.js"></script>
-        <script src="assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.time.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.tooltip.min.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.selection.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.crosshair.js"></script>
+        <!-- Plugins js -->
+        <script src="assets/libs/dropzone/dropzone.min.js"></script>
+        <script src="assets/libs/dropify/dropify.min.js"></script>
 
-        <!-- Dashboar 1 init js-->
-        <script src="assets/js/pages/dashboard-1.init.js"></script>
+        <!-- Loading buttons js -->
+        <script src="assets/libs/ladda/spin.js"></script>
+        <script src="assets/libs/ladda/ladda.js"></script>
 
-        <!-- App js-->
+        <!-- Table Editable plugin-->
+        <script src="assets/libs/jquery-tabledit/jquery.tabledit.min.js"></script>
+
+        <!-- Table editable init-->
+        <script src="assets/js/pages/tabledit.init.js"></script>
+
+        <!-- Buttons init js-->
+        <script src="assets/js/pages/loading-btn.init.js"></script>
+
+        <!-- third party js -->
+        <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.bootstrap4.js"></script>
+        <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables/buttons.flash.min.js"></script>
+        <script src="assets/libs/datatables/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.select.min.js"></script>
+        <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+        <!-- third party js ends -->
+
+        <!-- Datatables init -->
+        <script src="assets/js/pages/datatables.init.js"></script>
+
+        <!-- Init js-->
+        <script src="assets/js/pages/form-fileuploads.init.js"></script>
+
+        <!-- App js -->
         <script src="assets/js/app.min.js"></script>
         
     </body>
