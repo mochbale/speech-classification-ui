@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>UBold - Responsive Admin Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Plugins css -->
+        <link href="assets/libs/dropzone/dropzone.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- third party css -->
+        <link href="assets/libs/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+
+        <!-- Footable css -->
+        <link href="assets/libs/footable/footable.core.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Loading button css -->
+        <link href="assets/libs/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Topbar Start -->
+            <div class="navbar-custom">
+                <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                    <li class="d-none d-sm-block">
+                        <form class="app-search">
+                            <div class="app-search-box">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <div class="input-group-append">
+                                        <button class="btn" type="submit">
+                                            <i class="fe-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
+                            <span class="pro-user-name ml-1">
+                                Geneva <i class="mdi mdi-chevron-down"></i> 
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                            <!-- item-->
+                            <div class="dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome !</h6>
+                            </div>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-user"></i>
+                                <span>My Account</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-settings"></i>
+                                <span>Settings</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-lock"></i>
+                                <span>Lock Screen</span>
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <!-- item-->
+                            <a href="pages-login.html" class="dropdown-item notify-item">
+                                <i class="fe-log-out"></i>
+                                <span>Logout</span>
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
+                            <i class="fe-settings noti-icon"></i>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo text-center">
+                        <span class="logo-lg" style="font-size: 15px; line-height: 20px; padding: 20px; font-weight: bold">
+                            SISTEM SELEKSI <br>PELAMAR KERJA
+                            <!-- <span class="logo-lg-text-light">UBold</span> -->
+                        </span>
+                        <span class="logo-sm" style="font-size: 15px; font-weight: bold;">
+                            <!-- <span class="logo-sm-text-dark">U</span> -->
+                            SSPK
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect waves-light">
+                            <i class="fe-menu"></i>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- end Topbar -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left-side-menu">
+
+                <div class="slimscroll-menu">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+
+                        <ul class="metismenu" id="side-menu">
+
+                            <li class="menu-title">Navigation</li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fe-airplay"></i>
+                                    <!--<span class="badge badge-success badge-pill float-right">4</span>-->
+                                    <span> Dashboard </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="audio-upload.html">
+                                    <i class="far fa-file-audio"></i>
+                                    <span> Audio Upload </span>
+                                    <!--<span class="menu-arrow"></span>-->
+                                </a>
+                                <!--<ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="apps-kanbanboard.html">Kanban Board</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-calendar.html">Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-contacts.html">Contacts</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-projects.html">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-tickets.html">Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-companies.html">Companies</a>
+                                    </li>
+                                </ul>-->
+                            </li>
+
+                            <li>
+                                <a href="speech-to-text.html">
+                                    <i class="fe-users"></i>
+                                    <span> Speech to Text </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="text-grading.html">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                    <span> Text Grading </span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                                            <li class="breadcrumb-item active">Text Grading</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Text Grading</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+                        <div class="row">
+                            <div class="col-12 order-xl-1 order-2">
+                                <div class="card mb-2">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Text List</h4>
+                                        <p class="text-muted font-13 mb-4">
+                                            <!--DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction
+                                            function:
+                                            <code>$().DataTable();</code>.-->
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <form class="form-inline">
+                                                    <div class="form-group">
+                                                        <label for="inputPassword2" class="sr-only">Search</label>
+                                                        <input type="search" class="form-control" id="inputPassword2" placeholder="Search...">
+                                                    </div>
+                                                    <div class="form-group mx-sm-3">
+                                                        <label for="status-select" class="mr-2">Sort By</label>
+                                                        <select class="custom-select" id="status-select">
+                                                            <option selected="">All</option>
+                                                            <option value="1">Name</option>
+                                                            <option value="2">Time</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <!--<div class="text-lg-right mt-3 mt-lg-0">
+                                                    <button type="button" class="btn btn-success waves-effect waves-light mr-1"><i class="mdi mdi-settings"></i></button>
+                                                    <a href="#custom-modal" class="btn btn-danger waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayColor="#98a6ad"><i class="mdi mdi-plus-circle mr-1"></i> Add New</a>
+                                                </div>-->
+                                            </div><!-- end col-->
+                                        </div> <!-- end row -->
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Rhona Davidson</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Cedric Kelly</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Tiger Nixon</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Airi Satou</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <div class="card-box mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-10">
+                                            <div class="media">
+                                                
+                                                <div class="media-body">
+                                                    <h4 class="mt-0 mb-2 font-16">Jena Gaines</h4>
+                                                    <p class="mb-1"><b>Text : </b></p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+
+                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-sm-2">
+                                            <div class="text-sm-right">
+                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                            </button>
+                    
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div> <!-- end row -->
+                                </div> <!-- end card-box-->
+
+                                <!--<div class="text-center my-4">
+                                    <a href="javascript:void(0);" class="text-danger"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load more </a>
+                                </div>-->
+
+                            </div> <!-- end col -->
+
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                2015 - 2019 &copy; UBold theme by <a href="">Coderthemes</a> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-right footer-links d-none d-sm-block">
+                                    <a href="javascript:void(0);">About Us</a>
+                                    <a href="javascript:void(0);">Help</a>
+                                    <a href="javascript:void(0);">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+            <div class="rightbar-title">
+                <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                    <i class="dripicons-cross noti-icon"></i>
+                </a>
+                <h5 class="m-0 text-white">Settings</h5>
+            </div>
+            <div class="slimscroll-menu">
+                <!-- User box -->
+                <div class="user-box">
+                    <div class="user-img">
+                        <img src="assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
+                        <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
+                    </div>
+            
+                    <h5><a href="javascript: void(0);">Geneva Kennedy</a> </h5>
+                    <p class="text-muted mb-0"><small>Admin Head</small></p>
+                </div>
+
+                <!-- Settings -->
+                <hr class="mt-0" />
+                <h5 class="pl-3">Basic Settings</h5>
+                <hr class="mb-0" />
+
+                <div class="p-3">
+                    <div class="checkbox checkbox-primary mb-2">
+                        <input id="Rcheckbox1" type="checkbox" checked>
+                        <label for="Rcheckbox1">
+                            Notifications
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-primary mb-2">
+                        <input id="Rcheckbox2" type="checkbox" checked>
+                        <label for="Rcheckbox2">
+                            API Access
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-primary mb-2">
+                        <input id="Rcheckbox3" type="checkbox">
+                        <label for="Rcheckbox3">
+                            Auto Updates
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-primary mb-2">
+                        <input id="Rcheckbox4" type="checkbox" checked>
+                        <label for="Rcheckbox4">
+                            Online Status
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-primary mb-0">
+                        <input id="Rcheckbox5" type="checkbox" checked>
+                        <label for="Rcheckbox5">
+                            Auto Payout
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <hr class="mt-0" />
+                <h5 class="pl-3 pr-3">Messages <span class="float-right badge badge-pill badge-danger">25</span></h5>
+                <hr class="mb-0" />
+                <div class="p-3">
+                    <div class="inbox-widget">
+                        <div class="inbox-item">
+                            <div class="inbox-item-img"><img src="assets/images/users/user-2.jpg" class="rounded-circle" alt=""></div>
+                            <p class="inbox-item-author"><a href="javascript: void(0);" class="text-light">Tomaslau</a></p>
+                            <p class="inbox-item-text">I've finished it! See you so...</p>
+                        </div>
+                        <div class="inbox-item">
+                            <div class="inbox-item-img"><img src="assets/images/users/user-3.jpg" class="rounded-circle" alt=""></div>
+                            <p class="inbox-item-author"><a href="javascript: void(0);" class="text-light">Stillnotdavid</a></p>
+                            <p class="inbox-item-text">This theme is awesome!</p>
+                        </div>
+                        <div class="inbox-item">
+                            <div class="inbox-item-img"><img src="assets/images/users/user-4.jpg" class="rounded-circle" alt=""></div>
+                            <p class="inbox-item-author"><a href="javascript: void(0);" class="text-light">Kurafire</a></p>
+                            <p class="inbox-item-text">Nice to meet you</p>
+                        </div>
+
+                        <div class="inbox-item">
+                            <div class="inbox-item-img"><img src="assets/images/users/user-5.jpg" class="rounded-circle" alt=""></div>
+                            <p class="inbox-item-author"><a href="javascript: void(0);" class="text-light">Shahedk</a></p>
+                            <p class="inbox-item-text">Hey! there I'm available...</p>
+                        </div>
+                        <div class="inbox-item">
+                            <div class="inbox-item-img"><img src="assets/images/users/user-6.jpg" class="rounded-circle" alt=""></div>
+                            <p class="inbox-item-author"><a href="javascript: void(0);" class="text-light">Adhamdannaway</a></p>
+                            <p class="inbox-item-text">This theme is awesome!</p>
+                        </div>
+                    </div> <!-- end inbox-widget -->
+                </div> <!-- end .p-3-->
+
+            </div> <!-- end slimscroll-menu-->
+        </div>
+        <!-- /Right-bar -->
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- Plugins js -->
+        <script src="assets/libs/dropzone/dropzone.min.js"></script>
+        <script src="assets/libs/dropify/dropify.min.js"></script>
+
+        <!-- Loading buttons js -->
+        <script src="assets/libs/ladda/spin.js"></script>
+        <script src="assets/libs/ladda/ladda.js"></script>
+
+        <!-- Table Editable plugin-->
+        <script src="assets/libs/jquery-tabledit/jquery.tabledit.min.js"></script>
+
+        <!-- Table editable init-->
+        <script src="assets/js/pages/tabledit.init.js"></script>
+
+        <!-- Buttons init js-->
+        <script src="assets/js/pages/loading-btn.init.js"></script>
+
+        <!-- third party js -->
+        <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.bootstrap4.js"></script>
+        <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables/buttons.flash.min.js"></script>
+        <script src="assets/libs/datatables/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.select.min.js"></script>
+        <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+        <!-- third party js ends -->
+
+        <!-- Datatables init -->
+        <script src="assets/js/pages/datatables.init.js"></script>
+
+        <!-- Init js-->
+        <script src="assets/js/pages/form-fileuploads.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>
