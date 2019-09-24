@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^audio-upload.html$',views.audio_upload, name='audio-upload'),
     url(r'^text-grading.html$',views.text_grading, name='text grading'),
     url(r'^text-grading-score.html$',views.text_grading_score, name='text grading-score'),
+    url(r'^detail-data.html$',views.detail_data, name='detail-data'),
     url(r'^django_app',include('django_app.urls')),
     path('admin/', admin.site.urls),
 ]
