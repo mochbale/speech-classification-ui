@@ -17,6 +17,9 @@
         <!-- Loading button css -->
         <link href="assets/libs/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
 
+        <!-- Custom box css -->
+        <link href="assets/libs/custombox/custombox.min.css" rel="stylesheet">
+
         <!-- Bootstrap Tables css -->
         <link href="assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
 
@@ -55,7 +58,7 @@
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
                             <span class="pro-user-name ml-1">
-                                Geneva <i class="mdi mdi-chevron-down"></i> 
+                                Geneva <i class="mdi mdi-chevron-down"></i>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -140,7 +143,7 @@
                             <li class="menu-title">Navigation</li>
 
                             <li>
-                                <a href="#">
+                                <a href="index.html">
                                     <i class="fe-airplay"></i>
                                     <!--<span class="badge badge-success badge-pill float-right">4</span>-->
                                     <span> Dashboard </span>
@@ -211,7 +214,7 @@
 
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        
+
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -225,26 +228,26 @@
                                     <h4 class="page-title">Audio Upload</h4>
                                 </div>
                             </div>
-                        </div>     
-                        <!-- end page title --> 
+                        </div>
+                        <!-- end page title -->
 
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        
+
                                         <form action="/" method="post" class="dropzone" id="myAwesomeDropzone">
                                             <div class="fallback">
                                                 <input name="file" type="file" multiple />
                                             </div>
-            
+
                                             <div class="dz-message needsclick">
                                                 <i class="h1 text-muted dripicons-cloud-upload"></i>
                                                 <h3>Drop files here or click to upload.</h3>
                                                 <span class="text-muted font-13">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
                                             </div>
                                         </form>
-                                        
+
                                         <div class="clearfix text-right mt-3">
                                             <button type="button" class="ladda-button btn btn-danger" data-style="slide-right"><i class="mdi mdi-send mr-1"></i>Submit
                                             </button>
@@ -255,7 +258,7 @@
                             </div><!-- end col -->
                         </div>
                         <!-- end row -->
-                   
+
                         <div class="row">
 
                             <div class="col-lg-12">
@@ -268,48 +271,108 @@
                                         <table class="table table-hover mb-0">
                                             <thead>
                                             <tr>
-                                                <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
+                                                <th>Audio title</th>
+                                                <th>Aplicant name</th>
+                                                <th>File size</th>
+                                                <th>Duration</th>
+                                                <th>Upload Date</th>
                                                 <th data-sort-ignore="true">Edit</th>
                                                 <th data-sort-ignore="true">Delete</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                                <td><button class="btn btn-success"><span class="mdi mdi-pencil"></span></button></td>
-                                                <td><button class="btn btn-danger"><span class="mdi mdi-close"></span></button></td>
+                                            {% for audio in data3 %}
+                                              <tr>
+                                                <th scope="row">{{audio.title}}</th>
+                                                <td>{{audio.aplicants_name}}</td>
+                                                <td>{{audio.size}}</td  >
+                                                <td>{{audio.length}}</td>
+                                                <td>{{audio.upload_date}}</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal"><span class="mdi mdi-pencil"></span></button></td>
+                                                    {% csrf_token %}
+                                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-center"><span class="mdi mdi-close"></span></button></td>
+                                              </tr>
+                                            {% endfor %}
+
+                                            <!--<tr>
+                                                <th scope="row">Markjurcas.mp3</th>
+                                                <td>Mark Jurcas</td>
+                                                <td>6MB</td>
+                                                <td>10:25</td>
+                                                <td>tanggal</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-center"><span class="mdi mdi-close"></span></button></td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                                <td><button class="btn btn-success"><span class="mdi mdi-pencil"></span></button></td>
-                                                <td><button class="btn btn-danger"><span class="mdi mdi-close"></span></button></td>
+                                                <th scope="row">Jacobbima.mp3</th>
+                                                <td>Jacob Bima</td>
+                                                <td>8MB</td>
+                                                <td>14:30</td>
+                                                <td>tanggal</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-center"><span class="mdi mdi-close"></span></button></td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">3</th>
-                                                <td colspan="2">Larry the Bird</td>
-                                                <td>@twitter</td>
-                                                <td><button class="btn btn-success"><span class="mdi mdi-pencil"></span></button></td>
-                                                <td><button class="btn btn-danger"><span class="mdi mdi-close"></span></button></td>
-                                            </tr>
+                                                <th scope="row">Larrybird.mp3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>5MB</td>
+                                                <td>06:06</td>
+                                                <td>tanggal</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-center"><span class="mdi mdi-close"></span></button></td>
+                                            </tr>-->
                                             </tbody>
                                         </table>
                                     </div> <!-- end table-responsive-->
-        
+
                                 </div> <!-- end card-box -->
                             </div> <!-- end col -->
+
+                            <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="myCenterModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myCenterModalLabel">Are you Sure?</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure want to delete this?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">No</button>
+                                            <button type="button" class="btn btn-danger">Yes</button>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
 
                         </div>
                         <!-- end row-->
 
+                        <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Edit Nama</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body p-4">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Masukan Nama Pelamar</label>
+                                                    <input type="text" class="form-control" value="{}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-info waves-effect waves-light">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.modal -->
 
                     </div> <!-- container -->
 
@@ -320,7 +383,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                2015 - 2019 &copy; UBold theme by <a href="">Coderthemes</a> 
+                                2015 - 2019 &copy; UBold theme by <a href="">Coderthemes</a>
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-right footer-links d-none d-sm-block">
@@ -359,7 +422,7 @@
                         <img src="assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
                         <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
                     </div>
-            
+
                     <h5><a href="javascript: void(0);">Geneva Kennedy</a> </h5>
                     <p class="text-muted mb-0"><small>Admin Head</small></p>
                 </div>
@@ -462,8 +525,11 @@
         <!-- Init js-->
         <script src="assets/js/pages/form-fileuploads.init.js"></script>
 
+        <!-- Modal-Effect -->
+        <script src="assets/libs/custombox/custombox.min.js"></script>
+
         <!-- App js -->
         <script src="assets/js/app.min.js"></script>
-        
+
     </body>
 </html>
