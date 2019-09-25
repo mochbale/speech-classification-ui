@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template.response import TemplateResponse
-from .models import Audio, Text
+from .models import Audio, Text, Grade
 
 # Create your views here.
 def index(request):
