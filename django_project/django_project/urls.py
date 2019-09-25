@@ -18,6 +18,8 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 from django_app import views
+from django.conf.urls.static import static
+from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
@@ -29,8 +31,12 @@ urlpatterns = [
     url(r'^text-grading.html$',views.text_grading, name='text grading'),
     url(r'^text-grading-score.html$',views.text_grading_score, name='text grading-score'),
     url(r'^detail-data.html$',views.detail_data, name='detail-data'),
+    url(r'^save_audio_bundle$',views.save_audio_bundle, name='submit-upload'),
     url(r'^django_app',include('django_app.urls')),
     path('admin/', admin.site.urls),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

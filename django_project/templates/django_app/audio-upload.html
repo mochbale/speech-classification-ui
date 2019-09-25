@@ -250,8 +250,11 @@
                                         </form>
 
                                         <div class="clearfix text-right mt-3">
-                                            <button type="button" class="ladda-button btn btn-danger" data-style="slide-right"><i class="mdi mdi-send mr-1"></i>Submit
+                                          <form method="post" action="/save_audio_bundle">
+                                            {% csrf_token %}
+                                            <button type="submit" class="ladda-button btn btn-danger" data-style="slide-right"><i class="mdi mdi-send mr-1"></i>Submit
                                             </button>
+                                          </form>
                                         </div>
 
                                     </div> <!-- end card-body-->
