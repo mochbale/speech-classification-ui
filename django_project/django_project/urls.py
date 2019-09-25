@@ -32,6 +32,11 @@ urlpatterns = [
     url(r'^text-grading-score.html$',views.text_grading_score, name='text grading-score'),
     url(r'^detail-data.html$',views.detail_data, name='detail-data'),
     url(r'^save_audio_bundle$',views.save_audio_bundle, name='submit-upload'),
+
+    url(r'^delete_audio/(?P<pk>\d+)/$',views.delete_audio, name='delete_audio'),
+    url(r'^edit_audio$',views.save_audio_bundle),
+    url(r'^save_audio$',views.save_audio_bundle),
+
     url(r'^django_app',include('django_app.urls')),
     path('admin/', admin.site.urls),
 ]

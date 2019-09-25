@@ -294,9 +294,13 @@
                                                 <td>{{audio.upload_date}}</td>
                                                 <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal"><span class="mdi mdi-pencil"></span></button></td>
                                                     {% csrf_token %}
-                                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-center"><span class="mdi mdi-close"></span></button></td>
+                                                <td>
+
+                                                    <button type="submit" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-center"><span class="mdi mdi-close"></span></button>
+
+                                                </td>
                                               </tr>
-                                            {% endfor %}
+
 
                                             <!--<tr>
                                                 <th scope="row">Markjurcas.mp3</th>
@@ -344,8 +348,14 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">No</button>
-                                            <button type="button" class="btn btn-danger">Yes</button>
+
+                                            {% csrf_token %}
+                                            <a href="{% url 'delete_audio' audio.id %}">
+                                              <button type="button" class="btn btn-danger">Yes</button>
+                                            </a>
+                                            {% endfor %}
                                         </div>
+
                                     </div><!-- /.modal-content -->
                                 </div><!-- /.modal-dialog -->
                             </div><!-- /.modal -->
@@ -365,6 +375,8 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="control-label">Masukan Nama Pelamar</label>
+                                                    <input type="text" class="form-control" value="{}">
+                                                    <label class="control-label">Masukan Nama Audio</label>
                                                     <input type="text" class="form-control" value="{}">
                                                 </div>
                                             </div>

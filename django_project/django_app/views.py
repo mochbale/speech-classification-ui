@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.template.response import TemplateResponse
 from .models import Audio, Text, Grade
 from django.core.files.storage import FileSystemStorage
+from django.urls import reverse
+from django.http import HttpResponseRedirect
+
 import time
 uploaded_file_list = [];
 # Create your views here.
@@ -49,3 +52,9 @@ def save_audio_bundle(request):
     uploaded_file_list.clear()
     data3 = Audio.objects.all()
     return render(request, 'django_app/audio-upload.html', {"data3" : data3})
+
+def delete_audio(request, pk):
+    query = Audio.objects.get(pk=pk)
+    query.delete()
+    data3 = Audio.objects.all()
+    return HttpResponseRedirect(reverse('audio-upload'))
