@@ -21,6 +21,9 @@ class Audio(models.Model):
     def __str__(self):
         return self.title
 
+    def get_directory(self):
+        return self.directory
+
 
 class Text(models.Model):
     audio = models.ForeignKey('django_app.Audio', related_name='text',on_delete=models.CASCADE)

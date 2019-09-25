@@ -4,6 +4,8 @@ from .models import Audio, Text, Grade
 from django.core.files.storage import FileSystemStorage
 from django.urls import reverse
 from django.http import HttpResponseRedirect
+import os
+from django_project import settings
 
 import time
 uploaded_file_list = [];
@@ -55,6 +57,10 @@ def save_audio_bundle(request):
 
 def delete_audio(request, pk):
     query = Audio.objects.get(pk=pk)
+    audio_title = Audio.objects.get(pk=pk).title
+    complete_dir = os.path.join(settings.MEDIA_ROOT, audio_title)
+    print("ini base com dir " , complete_dir)
+    os.remove(complete_dir)
     query.delete()
     data3 = Audio.objects.all()
     return HttpResponseRedirect(reverse('audio-upload'))
