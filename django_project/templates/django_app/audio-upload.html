@@ -295,11 +295,12 @@
                                                 <td><a href="audio-upload-edit.html"><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="" data-target=""><span class="mdi mdi-pencil"></span></button></a></td>
                                                     {% csrf_token %}
                                                 <td>
-
+                                                  <a href="{% url 'delete_audio' audio.id %}">
                                                     <button type="submit" class="btn btn-danger" data-toggle="" data-target=""><span class="mdi mdi-close"></span></button>
-
+                                                  </a>
                                                 </td>
                                               </tr>
+
 
 
                                             <!--<tr>
@@ -329,6 +330,7 @@
                                                 <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal"><span class="mdi mdi-pencil"></span></button></td>
                                                 <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-center"><span class="mdi mdi-close"></span></button></td>
                                             </tr>-->
+                                            {% endfor %}
                                             </tbody>
                                         </table>
                                     </div> <!-- end table-responsive-->
@@ -350,9 +352,9 @@
                                             <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">No</button>
 
                                             {% csrf_token %}
-                                            <a href="{% url 'delete_audio' audio.id %}">
+
                                               <button type="button" class="btn btn-danger">Yes</button>
-                                            </a>
+
 
                                         </div>
 
@@ -386,7 +388,7 @@
                                         <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancel</button>
                                         <button type="button" class="btn btn-info waves-effect waves-light">Save changes</button>
                                     </div>
-                                    {% endfor %}
+
                                 </div>
                             </div>
                         </div>--><!-- /.modal -->
