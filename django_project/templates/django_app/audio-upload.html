@@ -292,11 +292,11 @@
                                                 <td>{{audio.size}}</td  >
                                                 <td>{{audio.length}}</td>
                                                 <td>{{audio.upload_date}}</td>
-                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal"><span class="mdi mdi-pencil"></span></button></td>
+                                                <td><a href="audio-upload-edit.html"><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="" data-target=""><span class="mdi mdi-pencil"></span></button></a></td>
                                                     {% csrf_token %}
                                                 <td>
 
-                                                    <button type="submit" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-center"><span class="mdi mdi-close"></span></button>
+                                                    <button type="submit" class="btn btn-danger" data-toggle="" data-target=""><span class="mdi mdi-close"></span></button>
 
                                                 </td>
                                               </tr>
@@ -336,7 +336,7 @@
                                 </div> <!-- end card-box -->
                             </div> <!-- end col -->
 
-                            <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="myCenterModalLabel" aria-hidden="true" style="display: none;">
+                            <!--<div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="myCenterModalLabel" aria-hidden="true" style="display: none;">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -356,14 +356,14 @@
 
                                         </div>
 
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div><!-- /.modal -->
+                                    </div>
+                                </div>
+                            </div>-->
 
                         </div>
                         <!-- end row-->
 
-                        <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                        <!--<div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -389,7 +389,7 @@
                                     {% endfor %}
                                 </div>
                             </div>
-                        </div><!-- /.modal -->
+                        </div>--><!-- /.modal -->
 
                     </div> <!-- container -->
 
