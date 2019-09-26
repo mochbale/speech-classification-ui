@@ -67,4 +67,4 @@ class Grade(models.Model):
     final_score = models.CharField(max_length=15)
 
     def __str__(self):
-        return self.title
+        return self.final_score
