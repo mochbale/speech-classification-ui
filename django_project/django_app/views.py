@@ -40,6 +40,9 @@ def audio_upload(request):
     data3 = Audio.objects.all()
     return render(request, 'django_app/audio-upload.html', {"data3" : data3})
 
+def audio_upload_edit(request):
+    return render(request, 'django_app/audio-upload-edit.html')
+
 def text_grading(request):
     data1 = Grade.objects.all()
     return render(request, 'django_app/text-grading.html', {"data1" : data1})
