@@ -292,7 +292,11 @@
                                                 <td>{{audio.size}}</td  >
                                                 <td>{{audio.length}}</td>
                                                 <td>{{audio.upload_date}}</td>
-                                                <td><a href="audio-upload-edit.html"><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="" data-target=""><span class="mdi mdi-pencil"></span></button></a></td>
+                                                <td>
+                                                  <a href="{{ audio.get_absolute_url }}">
+                                                    <button type="button" class="btn btn-success waves-effect waves-light" data-toggle="" data-target=""><span class="mdi mdi-pencil"></span></button>
+                                                  </a>
+                                                </td>
                                                     {% csrf_token %}
                                                 <td>
                                                   <a href="{% url 'delete_audio' audio.id %}">

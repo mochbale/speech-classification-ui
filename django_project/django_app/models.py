@@ -24,6 +24,9 @@ class Audio(models.Model):
     def get_directory(self):
         return self.directory
 
+    def get_absolute_url(self):
+        return "/edit_audio_upload/%s/"%(self.id)
+
 
 class Text(models.Model):
     audio = models.ForeignKey('django_app.Audio', related_name='text',on_delete=models.CASCADE)

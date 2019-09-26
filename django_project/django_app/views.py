@@ -40,9 +40,6 @@ def audio_upload(request):
     data3 = Audio.objects.all()
     return render(request, 'django_app/audio-upload.html', {"data3" : data3})
 
-def audio_upload_edit(request):
-    return render(request, 'django_app/audio-upload-edit.html')
-
 def text_grading(request):
     data1 = Grade.objects.all()
     return render(request, 'django_app/text-grading.html', {"data1" : data1})
@@ -67,3 +64,26 @@ def delete_audio(request, pk):
     query.delete()
     data3 = Audio.objects.all()
     return HttpResponseRedirect(reverse('audio-upload'))
+
+def edit_audio_upload(request, pk):
+    audio_title = Audio.objects.get(pk=pk).title
+    aplicants_name = Audio.objects.get(pk=pk).aplicants_name
+
+    if request.method == 'POST':
+        fs = FileSystemStorage()
+        audio = Audio.objects.get(pk=pk)
+
+        audio.title = request.POST['nama-file']
+        audio.aplicants_name = request.POST['nama-pelamar']
+        audio.directory = fs.url(audio.title)
+
+
+        complete_dir = os.path.join(settings.MEDIA_ROOT, audio_title)
+        new_dir = os.path.join(settings.MEDIA_ROOT, audio.title)
+        os.rename(complete_dir, new_dir)
+
+        audio.save()
+
+        return HttpResponseRedirect(reverse('audio-upload'))
+
+    return render(request, 'django_app/audio-upload-edit.html', {"aplicants_name" : aplicants_name , "audio_title" : audio_title })

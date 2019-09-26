@@ -29,14 +29,18 @@ urlpatterns = [
     url(r'^speech-to-text-edit.html$',views.speech_to_text_edit, name='speech_to_text-edit'),
     url(r'^audio-upload.html$',views.audio_upload, name='audio-upload'),
 
+    url(r'^audio-upload2.html$',views.edit_audio_upload, name='audio-upload2'),
+
     url(r'^text-grading.html$',views.text_grading, name='text grading'),
     url(r'^text-grading-score.html$',views.text_grading_score, name='text grading-score'),
     url(r'^detail-data.html$',views.detail_data, name='detail-data'),
     url(r'^save_audio_bundle$',views.save_audio_bundle, name='submit-upload'),
 
     url(r'^delete_audio/(?P<pk>\d+)/$',views.delete_audio, name='delete_audio'),
-    url(r'^audio-upload-edit.html$',views.audio_upload_edit, name='audio-upload-edit'),
-    
+    url(r'^edit_audio_upload/(?P<pk>\d+)/$',views.edit_audio_upload, name='edit_audio_upload'),
+
+
+
     url(r'^edit_audio$',views.save_audio_bundle),
     url(r'^save_audio$',views.save_audio_bundle),
 
@@ -44,7 +48,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
