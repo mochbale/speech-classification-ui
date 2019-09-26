@@ -73,8 +73,9 @@ def edit_audio_upload(request, pk):
         fs = FileSystemStorage()
         audio = Audio.objects.get(pk=pk)
 
-        audio.title = request.POST['nama-file']
-        audio.aplicants_name = request.POST['nama-pelamar']
+
+        audio.title = request.POST['nama-file'] #ini ngambil value dari <input name="nama-file"> di html, trs disimpen ke tabel audio atributenya title
+        audio.aplicants_name = request.POST['nama-pelamar'] #ini ngambil value dari <input name="nama-pelamar"> di html, trs disimpen ke tabel audio atributenya aplicants_name
         audio.directory = fs.url(audio.title)
 
 
@@ -82,7 +83,7 @@ def edit_audio_upload(request, pk):
         new_dir = os.path.join(settings.MEDIA_ROOT, audio.title)
         os.rename(complete_dir, new_dir)
 
-        audio.save()
+        audio.save() #ini ngesave perubahan yang udah dibikin di baris 77 sama 78
 
         return HttpResponseRedirect(reverse('audio-upload'))
 
