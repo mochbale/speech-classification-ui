@@ -25,8 +25,12 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     url(r'^$',views.index, name='index'),
     url(r'^index.html$',views.index, name='index'),
+
     url(r'^speech-to-text.html$',views.speech_to_text, name='speech_to_text'),
     url(r'^speech-to-text-edit.html$',views.speech_to_text_edit, name='speech_to_text-edit'),
+
+    url(r'^speech_to_text_process/(?P<pk>\d+)/$', views.speech_to_text_process, name='speech_to_text_process'), #zidan
+
     url(r'^audio-upload.html$',views.audio_upload, name='audio-upload'),
 
     url(r'^audio-upload2.html$',views.edit_audio_upload, name='audio-upload2'),
@@ -38,7 +42,6 @@ urlpatterns = [
 
     url(r'^delete_audio/(?P<pk>\d+)/$',views.delete_audio, name='delete_audio'),
     url(r'^edit_audio_upload/(?P<pk>\d+)/$',views.edit_audio_upload, name='edit_audio_upload'),
-
 
 
     url(r'^edit_audio$',views.save_audio_bundle),

@@ -14,7 +14,23 @@ def index(request):
     return render(request, 'django_app/index.html')
 
 def speech_to_text(request):
-    data2 = Text.objects.all()
+    data2 = Audio.objects.all()
+    return render(request, 'django_app/speech-to-text.html', {"data2" : data2})
+
+def speech_to_text_process(request, pk): #zidane
+    data2 = Audio.objects.all()
+    text_title = Audio.objects.get(pk=pk).title
+    aplicants_name = Audio.objects.get(pk=pk).aplicants_name
+    text_audio = Audio.objects.get(pk=pk)
+
+    print("ini text title : ", text_title )
+    print("ini apli name : ", aplicants_name )
+    print("ini text audio id FK : ", text_audio )
+
+    text = Text(audio=text_audio ,title=text_title, aplicants_name=aplicants_name, full_text="WOI", length="3:33 min")
+    text.save()
+
+
     return render(request, 'django_app/speech-to-text.html', {"data2" : data2})
 
 def speech_to_text_edit(request):

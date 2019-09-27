@@ -258,13 +258,21 @@
                                             <tbody>
                                             {% for text in data2 %}
                                               <tr>
-                                                  <td>{{text.audio}}</td>
-                                                  <td>{{text.title}}</td>
                                                   <td>{{text.aplicants_name}}</td>
+                                                  <td>{{text.title}}</td>
+                                                  <td>null</td>
                                                   <td>66</td>
                                                   <td>2012/11/27</td>
-                                                  <td><a href="speech-to-text-edit.html"><button type="button" class="ladda-button btn btn-success" data-style="slide-right"><i class="mdi mdi-send"></i></button></a></td>
-                                                  <td><a href="detail-data.html"><button type="button" class="ladda-button btn btn-info" data-style="slide-right"><i class="mdi mdi-send"></i></button></a></td>
+                                                  <td>
+                                                    <a href="speech-to-text-edit.html">
+                                                    <button type="button" class="ladda-button btn btn-success" data-style="slide-right"><i class="mdi mdi-send"></i>
+                                                    </button>
+                                                  </a></td>
+                                                  <td>
+                                                    <a href="{% url 'speech_to_text_process' text.id %}">
+                                                      <button type="button" class="ladda-button btn btn-info" data-style="slide-right"><i class="mdi mdi-send"></i></button>
+                                                    </a>
+                                                  </td>
                                               </tr>
                                             {% endfor %}
                                                 <!--<tr>
