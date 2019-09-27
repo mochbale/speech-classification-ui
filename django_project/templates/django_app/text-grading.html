@@ -58,7 +58,7 @@
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
                             <span class="pro-user-name ml-1">
-                                Geneva <i class="mdi mdi-chevron-down"></i> 
+                                Geneva <i class="mdi mdi-chevron-down"></i>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -214,7 +214,7 @@
 
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        
+
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -228,8 +228,8 @@
                                     <h4 class="page-title">Text Grading</h4>
                                 </div>
                             </div>
-                        </div>     
-                        <!-- end page title --> 
+                        </div>
+                        <!-- end page title -->
 
                         <div class="row">
                             <div class="col-12 order-xl-1 order-2">
@@ -260,135 +260,32 @@
                                     </div> <!-- end card-body-->
                                 </div> <!-- end card-->
 
-                                <div class="card-box mb-2">
-                                    <div class="row align-items-center">
-                                        <div class="col-sm-10">
-                                            <div class="media">
-                                                
-                                                <div class="media-body">
-                                                    <h4 class="mt-0 mb-2 font-16">Rhona Davidson</h4>
-                                                    <p class="mb-1"><b>Text : </b></p>
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+                                {% for text in data4 %}
+                                  <div class="card-box mb-2">
+                                      <div class="row align-items-center">
+                                          <div class="col-sm-10">
+                                              <div class="media">
 
-                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                        <div class="col-sm-2">
-                                            <div class="text-sm-right">
-                                            <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
-                                            </button>
-                    
-                                            </div>
-                                        </div> <!-- end col-->
-                                    </div> <!-- end row -->
-                                </div> <!-- end card-box-->
+                                                  <div class="media-body">
+                                                      <h4 class="mt-0 mb-2 font-16">{{text.aplicants_name}}</h4>
+                                                      <p class="mb-1"><b>Text : </b></p>
+                                                      <p class="mb-0">{{text.full_text}}</p>
+                                                  </div>
+                                              </div>
+                                          </div>
 
-                                <div class="card-box mb-2">
-                                    <div class="row align-items-center">
-                                        <div class="col-sm-10">
-                                            <div class="media">
-                                                
-                                                <div class="media-body">
-                                                    <h4 class="mt-0 mb-2 font-16">Cedric Kelly</h4>
-                                                    <p class="mb-1"><b>Text : </b></p>
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
 
-                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                        <div class="col-sm-2">
-                                            <div class="text-sm-right">
-                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
-                                            </button>
-                    
-                                            </div>
-                                        </div> <!-- end col-->
-                                    </div> <!-- end row -->
-                                </div> <!-- end card-box-->
+                                          <div class="col-sm-2">
+                                              <div class="text-sm-right">
+                                              <a href="{% url 'text_grading_score' text.id %}"><button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                              </button></a>
 
-                                <div class="card-box mb-2">
-                                    <div class="row align-items-center">
-                                        <div class="col-sm-10">
-                                            <div class="media">
-                                                
-                                                <div class="media-body">
-                                                    <h4 class="mt-0 mb-2 font-16">Tiger Nixon</h4>
-                                                    <p class="mb-1"><b>Text : </b></p>
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
+                                              </div>
+                                          </div> <!-- end col-->
+                                      </div> <!-- end row -->
+                                  </div> <!-- end card-box-->
+                                {% endfor %}
 
-                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                        <div class="col-sm-2">
-                                            <div class="text-sm-right">
-                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
-                                            </button>
-                    
-                                            </div>
-                                        </div> <!-- end col-->
-                                    </div> <!-- end row -->
-                                </div> <!-- end card-box-->
-
-                                <div class="card-box mb-2">
-                                    <div class="row align-items-center">
-                                        <div class="col-sm-10">
-                                            <div class="media">
-                                                
-                                                <div class="media-body">
-                                                    <h4 class="mt-0 mb-2 font-16">Airi Satou</h4>
-                                                    <p class="mb-1"><b>Text : </b></p>
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
-
-                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                        <div class="col-sm-2">
-                                            <div class="text-sm-right">
-                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
-                                            </button>
-                    
-                                            </div>
-                                        </div> <!-- end col-->
-                                    </div> <!-- end row -->
-                                </div> <!-- end card-box-->
-
-                                <div class="card-box mb-2">
-                                    <div class="row align-items-center">
-                                        <div class="col-sm-10">
-                                            <div class="media">
-                                                
-                                                <div class="media-body">
-                                                    <h4 class="mt-0 mb-2 font-16">Jena Gaines</h4>
-                                                    <p class="mb-1"><b>Text : </b></p>
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat in ipsum sed dapibus. Quisque consectetur aliquet felis et fringilla. Duis efficitur augue ut risus commodo dictum. Duis semper sagittis mauris, a mollis nisl congue quis. Vestibulum mattis sit amet risus id tempus. Sed vehicula nisi ut dignissim iaculis. Nullam accumsan placerat finibus.
-
-                                                    Suspendisse velit orci, maximus tempus nisi nec, euismod commodo arcu. Sed finibus gravida lectus, ac hendrerit lectus congue eu. Pellentesque sit amet neque sit amet neque facilisis pulvinar id et ante. Nullam eu nunc ullamcorper, finibus leo et, lacinia lacus. Integer vestibulum, ex et maximus pulvinar, urna leo efficitur neque, ut suscipit velit odio sit amet ipsum. Duis placerat leo enim, eget mollis nibh finibus sed. Suspendisse interdum finibus nisi quis elementum. Cras justo mauris, interdum at ornare non, porttitor id eros. Quisque at nisi nibh. Nunc lacinia, lacus a ornare tristique, risus velit sodales ipsum, ac elementum ex nulla vitae diam. Quisque dignissim dolor justo. Vestibulum faucibus ante nunc. Mauris sit amet odio pretium, cursus tortor sed, pellentesque mauris. Fusce lectus ligula, elementum a eleifend eget, condimentum id dui. Nullam nec tempor eros, at accumsan turpis.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                        <div class="col-sm-2">
-                                            <div class="text-sm-right">
-                                                <button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
-                                            </button>
-                    
-                                            </div>
-                                        </div> <!-- end col-->
-                                    </div> <!-- end row -->
-                                </div> <!-- end card-box-->
 
                                 <!--<div class="text-center my-4">
                                     <a href="javascript:void(0);" class="text-danger"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load more </a>
@@ -408,7 +305,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                2015 - 2019 &copy; UBold theme by <a href="">Coderthemes</a> 
+                                2015 - 2019 &copy; UBold theme by <a href="">Coderthemes</a>
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-right footer-links d-none d-sm-block">
@@ -447,7 +344,7 @@
                         <img src="assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
                         <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
                     </div>
-            
+
                     <h5><a href="javascript: void(0);">Geneva Kennedy</a> </h5>
                     <p class="text-muted mb-0"><small>Admin Head</small></p>
                 </div>
@@ -573,6 +470,6 @@
 
         <!-- App js -->
         <script src="assets/js/app.min.js"></script>
-        
+
     </body>
 </html>
