@@ -4,7 +4,7 @@ from .models import Audio, Text, Grade
 from django.core.files.storage import FileSystemStorage
 from django.urls import reverse
 from django.http import HttpResponseRedirect
-import os
+import os, random
 from django_project import settings
 
 import time
@@ -57,11 +57,38 @@ def audio_upload(request):
     return render(request, 'django_app/audio-upload.html', {"data3" : data3})
 
 def text_grading(request):
+    data4 = Text.objects.all()
     data1 = Grade.objects.all()
-    return render(request, 'django_app/text-grading.html', {"data1" : data1})
+    return render(request, 'django_app/text-grading.html', {"data1" : data1, "data4": data4})
 
-def text_grading_score(request):
-    return render(request, 'django_app/text-grading-score.html')
+def text_grading_score(request, pk):
+    data1 = Grade.objects.all()
+
+    Action_score = ['1','2','3','4']
+    Imagine_score = ['1','2','3','4']
+    Fokus_score = ['1','2','3','4']
+    Integrity_score = ['1','2','3','4']
+    Enthusiasm_score = ['1','2','3','4']
+    Totaly_score = ['1','2','3','4']
+    Solid_score = ['1','2','3','4']
+    Speed_score = ['1','2','3','4']
+    Smart_score = ['1','2','3','4']
+
+    text_tabel_text = Text.objects.get(pk=pk)
+    Action = random.choice(Action_score)
+    Imagine = random.choice(Imagine_score)
+    Fokus = random.choice(Fokus_score)
+    Integrity = random.choice(Integrity_score)
+    Enthusiasm = random.choice(Enthusiasm_score)
+    Totaly = random.choice(Totaly_score)
+    Solid = random.choice(Solid_score)
+    Speed = random.choice(Speed_score)
+    Smart = random.choice(Smart_score)
+    final_score = "Dummy"
+
+    grade = Grade(text=text_tabel_text, a_score=Action, b_score=Imagine , c_score=Fokus , d_score=Integrity, e_score=Enthusiasm, f_score=Totaly, g_score=Solid, h_score=Speed, i_score=Smart, final_score=final_score)
+    grade.save()
+    return render(request, 'django_app/text-grading-score.html', {"data1" : data1})
 
 def detail_data(request):
     return render(request, 'django_app/detail-data.html')
