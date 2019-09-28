@@ -230,26 +230,28 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Edit Text {{ aplicants_name }}</h4>
+                                        <form method="post">
+                                            {% csrf_token %}
+                                                <h4 class="header-title">Edit Text {{ aplicants_name }}</h4>
 
-                                        <input type="text" id="example-email" class="form-control" name="full_text" value="{{ full_text }}">
-                                            
-                                         <!-- end Snow-editor-->
+                                                <input type="text" id="example-email" class="form-control" name="full_text" value="{{ full_text }}">
+                                                    
+                                                 <!-- end Snow-editor-->
 
-                                        <div class="previous list_inline-item mt-3">
-                                            
-                                        </div>
+                                                <div class="previous list_inline-item mt-3">
+                                                    
+                                                </div>
 
-                                        <ul class="list-inline wizard mt-3">
-                                            <li class="previous list-inline-item">
-                                                <button type="button" class="btn btn-success" onclick="window.location.href='../../text-grading.html'">Back
-                                            </button>
-                                            </li>
-                                            <li class="next list-inline-item float-right">
-                                                <button type="submit" class="ladda-button btn btn-info" data-style="slide-right"><i class="mdi mdi-send mr-1"></i>Save
-                                            </button>
-                                            </li>
-                                        </ul>
+                                                <ul class="list-inline wizard mt-3">
+                                                    <li class="previous list-inline-item">
+                                                        <button type="button" class="btn btn-success" onclick="window.location.href='../../text-grading.html'">Back
+                                                    </button>
+                                                    </li>
+                                                    <li class="next list-inline-item float-right">
+                                                        <button type="submit" class="ladda-button btn btn-info" data-style="slide-right"><i class="mdi mdi-send mr-1"></i>Save
+                                                    </button>
+                                                    </li>
+                                                </ul>
 
                                     </div> <!-- end card-body-->
                                 </div> <!-- end card-->
