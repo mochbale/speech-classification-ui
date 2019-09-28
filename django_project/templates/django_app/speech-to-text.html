@@ -247,7 +247,7 @@
                                                     <th>Upload Date</th>
                                                     <th>Aplicant Name</th>
                                                     <th>File Name</th>
-                                                    <th>Edit</th>
+                                                    <!--<th>Edit</th>-->
                                                     <th>Process</th>
                                                     <!--<th>Full Text</th>-->
                                                 </tr>
@@ -259,11 +259,11 @@
                                                   <td>{{text.upload_date}}</td>
                                                   <td>{{text.aplicants_name}}</td>
                                                   <td>{{text.title}}</td>
-                                                  <td>
-                                                    <!--<a href="speech-to-text-edit.html">
+                                                  <!--<td>
+                                                    <a href="speech-to-text-edit.html">
                                                     <button type="button" class="ladda-button btn btn-success" data-style="slide-right"><i class="mdi mdi-send"></i>
-                                                    </button>-->
-                                                  </a></td>
+                                                    </button>
+                                                  </a></td>-->
                                                   <td>
                                                     <a href="{% url 'speech_to_text_process' text.id %}">
                                                       <button type="button" class="ladda-button btn btn-info" data-style="slide-right"><i class="mdi mdi-send"></i></button>
