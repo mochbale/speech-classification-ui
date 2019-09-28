@@ -19,6 +19,7 @@ def speech_to_text(request):
 
 def speech_to_text_process(request, pk): #zidane
     data2 = Audio.objects.all()
+    data3 = Text.objects.all()
     text_title = Audio.objects.get(pk=pk).title
     aplicants_name = Audio.objects.get(pk=pk).aplicants_name
     text_audio = Audio.objects.get(pk=pk)
@@ -27,14 +28,39 @@ def speech_to_text_process(request, pk): #zidane
     #print("ini apli name : ", aplicants_name )
     #print("ini text audio id FK : ", text_audio )
 
-    text = Text(audio=text_audio ,title=text_title, aplicants_name=aplicants_name, full_text="WOI", length="3:33 min")
+    text = Text(audio=text_audio ,title=text_title, aplicants_name=aplicants_name, full_text="Audio belum di proses", length="3:33 min")
     text.save()
 
-    return HttpResponseRedirect(reverse('speech_to_text'))
-    return render(request, 'django_app/speech-to-text.html', {"data2" : data2})
 
-def speech_to_text_edit(request):
-    return render(request, 'django_app/speech-to-text-edit.html')
+
+    return HttpResponseRedirect(reverse('speech_to_text'))
+    return render(request, 'django_app/speech-to-text.html', {"data2" : data2, "data3" : data3})
+
+#def speech_to_text_edit(request):
+#    return render(request, 'django_app/speech-to-text-edit.html')
+
+def speech_to_text_edit(request, pk):
+    full_text = Text.objects.get(pk=pk).full_text
+    aplicants_name = Text.objects.get(pk=pk).aplicants_name
+
+    if request.method == 'POST':
+        fs = FileSystemStorage()
+        text = Text.objects.get(pk=pk)
+
+
+        text.full_text = request.POST['full_text'] #ini ngambil value dari <input name="nama-file"> di html, trs disimpen ke tabel audio atributenya title
+        text.directory = fs.url(text.full_text)
+
+
+        complete_dir = os.path.join(settings.MEDIA_ROOT, audio_title)
+        new_dir = os.path.join(settings.MEDIA_ROOT, text.full_text)
+        os.rename(complete_dir, new_dir)
+
+        text.save() #ini ngesave perubahan yang udah dibikin di baris 77 sama 78
+
+        return HttpResponseRedirect(reverse('text grading'))
+
+    return render(request, 'django_app/speech-to-text-edit.html', {"full_text" : full_text , "aplicants_name" : aplicants_name })
 
 def audio_upload(request):
     print(request.method)
