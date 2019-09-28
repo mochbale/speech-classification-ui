@@ -47,14 +47,8 @@ def speech_to_text_edit(request, pk):
         fs = FileSystemStorage()
         text = Text.objects.get(pk=pk)
 
-
         text.full_text = request.POST['full_text'] #ini ngambil value dari <input name="nama-file"> di html, trs disimpen ke tabel audio atributenya title
         text.directory = fs.url(text.full_text)
-
-
-        complete_dir = os.path.join(settings.MEDIA_ROOT, audio_title)
-        new_dir = os.path.join(settings.MEDIA_ROOT, text.full_text)
-        os.rename(complete_dir, new_dir)
 
         text.save() #ini ngesave perubahan yang udah dibikin di baris 77 sama 78
 
