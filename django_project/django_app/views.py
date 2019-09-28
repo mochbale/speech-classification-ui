@@ -23,14 +23,14 @@ def speech_to_text_process(request, pk): #zidane
     aplicants_name = Audio.objects.get(pk=pk).aplicants_name
     text_audio = Audio.objects.get(pk=pk)
 
-    print("ini text title : ", text_title )
-    print("ini apli name : ", aplicants_name )
-    print("ini text audio id FK : ", text_audio )
+    #print("ini text title : ", text_title )
+    #print("ini apli name : ", aplicants_name )
+    #print("ini text audio id FK : ", text_audio )
 
     text = Text(audio=text_audio ,title=text_title, aplicants_name=aplicants_name, full_text="WOI", length="3:33 min")
     text.save()
 
-
+    return HttpResponseRedirect(reverse('speech_to_text'))
     return render(request, 'django_app/speech-to-text.html', {"data2" : data2})
 
 def speech_to_text_edit(request):
