@@ -263,21 +263,30 @@
                                 {% for text in data4 %}
                                   <div class="card-box mb-2">
                                       <div class="row align-items-center">
-                                          <div class="col-sm-10">
+                                          <div class="col-sm-8">
                                               <div class="media">
 
                                                   <div class="media-body">
+                                                      <!--<p class="text-muted float-right">{{text.audio}}</p>-->
                                                       <h4 class="mt-0 mb-2 font-16">{{text.aplicants_name}}</h4>
-                                                      <p class="mb-1"><b>Text : </b></p>
+                                                      <p class="mb-1"><b>Text :</b> {{text.audio}} </p>
                                                       <p class="mb-0">{{text.full_text}}</p>
                                                   </div>
                                               </div>
                                           </div>
+                                          
+                                          <div class="col-sm-2">
+                                              <div class="text-sm-right">
+                                              <a href="#"><button type="button" class="btn btn-success" data-style="slide-right"><i class="mdi mdi-pencil mr-1"></i>Edit Text
+                                              </button></a>
 
+                                              </div>
+                                          </div> <!-- end col--> 
+                                              {% csrf_token %}                                         
 
                                           <div class="col-sm-2">
                                               <div class="text-sm-right">
-                                              <a href="{% url 'text_grading_score' text.id %}"><button type="button" class="btn btn-danger" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
+                                              <a href="{% url 'text_grading_score' text.id %}"><button type="button" class="btn btn-info" data-style="slide-right" onclick="window.location.href='text-grading-score.html'"><i class="mdi mdi-send mr-1"></i>Grade Text
                                               </button></a>
 
                                               </div>
