@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^index.html$',views.index, name='index'),
 
     url(r'^speech-to-text.html$',views.speech_to_text, name='speech_to_text'),
-    url(r'^speech-to-text-edit.html$',views.speech_to_text_edit, name='speech_to_text-edit'),
+    url(r'^speech_to_text_edit/(?P<pk>\d+)/$',views.speech_to_text_edit, name='speech_to_text_edit'),
 
     url(r'^speech_to_text_process/(?P<pk>\d+)/$', views.speech_to_text_process, name='speech_to_text_process'), #zidan
 
