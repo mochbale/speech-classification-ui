@@ -16,42 +16,51 @@ Including another URLconf
 from django.conf.urls import url
 from django.conf.urls import include
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django_app import views
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+
 urlpatterns = [
-    url(r'^$',views.index, name='index'),
-    url(r'^index.html$',views.index, name='index'),
+    url(r'^$', views.index, name='index'),
+    url(r'^index.html$', views.index, name='index'),
 
-    url(r'^speech-to-text.html$',views.speech_to_text, name='speech_to_text'),
-    url(r'^speech_to_text_edit/(?P<pk>\d+)/$',views.speech_to_text_edit, name='speech_to_text_edit'),
+    url(r'^$', views.tes_page, name='tes_page'),
+    url(r'^tes_page.html$', views.tes_page, name='tes_page'),
 
-    url(r'^speech_to_text_process/(?P<pk>\d+)/$', views.speech_to_text_process, name='speech_to_text_process'), #zidan
+    url(r'^speech-to-text.html$', views.speech_to_text, name='speech_to_text'),
+    url(r'^speech_to_text_edit/(?P<pk>\d+)/$',
+        views.speech_to_text_edit, name='speech_to_text_edit'),
 
-    url(r'^audio-upload.html$',views.audio_upload, name='audio-upload'),
+    url(r'^speech_to_text_process/(?P<pk>\d+)/$',
+        views.speech_to_text_process, name='speech_to_text_process'),  # zidan
 
-    url(r'^audio-upload2.html$',views.edit_audio_upload, name='audio-upload2'),
+    url(r'^audio-upload.html$', views.audio_upload, name='audio-upload'),
 
-    url(r'^text-grading.html$',views.text_grading, name='text grading'),
-    url(r'^text_grading_score/(?P<pk>\d+)/$',views.text_grading_score, name='text_grading_score'),
-    url(r'^detail-data.html$',views.detail_data, name='detail-data'),
-    url(r'^save_audio_bundle$',views.save_audio_bundle, name='submit-upload'),
+    url(r'^audio-upload2.html$', views.edit_audio_upload, name='audio-upload2'),
 
-    url(r'^delete_audio/(?P<pk>\d+)/$',views.delete_audio, name='delete_audio'),
-    url(r'^edit_audio_upload/(?P<pk>\d+)/$',views.edit_audio_upload, name='edit_audio_upload'),
+    url(r'^text-grading.html$', views.text_grading, name='text grading'),
+    url(r'^text_grading_score/(?P<pk>\d+)/$',
+        views.text_grading_score, name='text_grading_score'),
+    url(r'^detail-data.html$', views.detail_data, name='detail-data'),
+    url(r'^save_audio_bundle$', views.save_audio_bundle, name='submit-upload'),
+
+    url(r'^delete_audio/(?P<pk>\d+)/$', views.delete_audio, name='delete_audio'),
+    url(r'^edit_audio_upload/(?P<pk>\d+)/$',
+        views.edit_audio_upload, name='edit_audio_upload'),
 
 
-    url(r'^edit_audio$',views.save_audio_bundle),
-    url(r'^save_audio$',views.save_audio_bundle),
+    url(r'^edit_audio$', views.save_audio_bundle),
+    url(r'^save_audio$', views.save_audio_bundle),
 
-    url(r'^django_app',include('django_app.urls')),
+    url(r'^django_app', include('django_app.urls')),
     path('admin/', admin.site.urls),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

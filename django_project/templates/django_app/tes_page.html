@@ -13,6 +13,13 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
+        <!-- Plugins css -->
+        <link
+            href="assets/libs/flatpickr/flatpickr.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+
         <!-- App css -->
         <link
             href="assets/css/bootstrap.min.css"
@@ -225,7 +232,7 @@
 
                             <li>
                                 <a href="tes_page.html">
-                                    <i class="fa-brands fa-github-square"></i>
+                                    <i class="fe-user"></i>
                                     <span> Tes Page </span>
                                 </a>
                             </li>
@@ -252,247 +259,204 @@
                             <div class="col-12">
                                 <div class="page-title-box">
                                     <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item">
-                                                <a href="javascript: void(0);"
-                                                    >Dashboard</a
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <div
+                                                    class="input-group input-group-sm"
                                                 >
-                                            </li>
-                                            <li class="breadcrumb-item active">
-                                                Detail Pelamar
-                                            </li>
-                                        </ol>
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        id="dash-daterange"
+                                                    />
+                                                    <div
+                                                        class="input-group-append"
+                                                    >
+                                                        <span
+                                                            class="input-group-text bg-blue border-blue text-white"
+                                                        >
+                                                            <i
+                                                                class="mdi mdi-calendar-range font-13"
+                                                            ></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a
+                                                href="javascript: void(0);"
+                                                class="btn btn-blue btn-sm ml-2"
+                                            >
+                                                <i
+                                                    class="mdi mdi-autorenew"
+                                                ></i>
+                                            </a>
+                                            <a
+                                                href="javascript: void(0);"
+                                                class="btn btn-blue btn-sm ml-1"
+                                            >
+                                                <i
+                                                    class="mdi mdi-filter-variant"
+                                                ></i>
+                                            </a>
+                                        </form>
                                     </div>
-                                    <h4 class="page-title">Detail Pelamar</h4>
+                                    <h4 class="page-title">HAI ZIEKHUN</h4>
                                 </div>
                             </div>
                         </div>
                         <!-- end page title -->
-
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-xl-12">
                                 <div class="card-box">
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="mb-0">
-                                                <h4 class="mb-3">Jacob Bima</h4>
-                                                <div class="col-md-4">
-                                                    <p class="text-muted">
-                                                        <i
-                                                            class="mdi mdi-checkbox-marked-circle-outline h6 text-primary mr-2"
-                                                        ></i
-                                                        >File Name =
-                                                        jacobbima.mp3
-                                                    </p>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <p class="text-muted">
-                                                        <i
-                                                            class="mdi mdi-checkbox-marked-circle-outline h6 text-primary mr-2"
-                                                        ></i
-                                                        >Size = 8MB
-                                                    </p>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <p class="text-muted">
-                                                        <i
-                                                            class="mdi mdi-checkbox-marked-circle-outline h6 text-primary mr-2"
-                                                        ></i
-                                                        >Duration = 14:30
-                                                    </p>
-                                                </div>
+                                    <h4 class="header-title mb-3">
+                                        Total Pelamar
+                                    </h4>
 
-                                                <p class="text-muted mb-4">
-                                                    <b>Text title:</b> Nama
-                                                    Text.txt
+                                    <div
+                                        class="widget-chart text-center"
+                                        dir="auto"
+                                    >
+                                        <input
+                                            data-plugin="knob"
+                                            data-width="250"
+                                            data-height="250"
+                                            data-linecap="round"
+                                            data-bgColor="#525e6b"
+                                            data-fgColor="#f1556c"
+                                            value="40"
+                                            data-skin="tron"
+                                            data-angleOffset="250"
+                                            data-readOnly="true"
+                                            data-thickness=".12"
+                                        />
+                                        <p>
+                                            Jumlah Pelamar yang mendaftar 40%
+                                            dari total kapasitas Pelamar
+                                        </p>
+                                        <h5 class="text-muted mt-3">
+                                            Total Pelamar Keseluruhan
+                                        </h5>
+                                        <h2>200</h2>
 
-                                                    <br />
-                                                    Lorem ipsum dolor sit amet,
-                                                    consectetur adipiscing elit.
-                                                    Donec consequat in ipsum sed
-                                                    dapibus. Quisque consectetur
-                                                    aliquet felis et fringilla.
-                                                    Duis efficitur augue ut
-                                                    risus commodo dictum. Duis
-                                                    semper sagittis mauris, a
-                                                    mollis nisl congue quis.
-                                                    Vestibulum mattis sit amet
-                                                    risus id tempus. Sed
-                                                    vehicula nisi ut dignissim
-                                                    iaculis. Nullam accumsan
-                                                    placerat finibus.
-                                                    Suspendisse velit orci,
-                                                    maximus tempus nisi nec,
-                                                    euismod commodo arcu. Sed
-                                                    finibus gravida lectus, ac
-                                                    hendrerit lectus congue eu.
-                                                    Pellentesque sit amet neque
-                                                    sit amet neque facilisis
-                                                    pulvinar id et ante. Nullam
-                                                    eu nunc ullamcorper, finibus
-                                                    leo et, lacinia lacus.
-                                                    Integer vestibulum, ex et
-                                                    maximus pulvinar, urna leo
-                                                    efficitur neque, ut suscipit
-                                                    velit odio sit amet ipsum.
-                                                    Duis placerat leo enim, eget
-                                                    mollis nibh finibus sed.
-                                                    Suspendisse interdum finibus
-                                                    nisi quis elementum. Cras
-                                                    justo mauris, interdum at
-                                                    ornare non, porttitor id
-                                                    eros. Quisque at nisi nibh.
-                                                    Nunc lacinia, lacus a ornare
-                                                    tristique, risus velit
-                                                    sodales ipsum, ac elementum
-                                                    ex nulla vitae diam. Quisque
-                                                    dignissim dolor justo.
-                                                    Vestibulum faucibus ante
-                                                    nunc. Mauris sit amet odio
-                                                    pretium, cursus tortor sed,
-                                                    pellentesque mauris. Fusce
-                                                    lectus ligula, elementum a
-                                                    eleifend eget, condimentum
-                                                    id dui. Nullam nec tempor
-                                                    eros, at accumsan turpis.
+                                        <div class="row mt-3">
+                                            <div class="col-4">
+                                                <p
+                                                    class="text-muted font-15 mb-1 text-truncate"
+                                                >
+                                                    Baik
                                                 </p>
-                                                <div class="row mb-3"></div>
-
-                                                <div>
-                                                    <a
-                                                        href="speech-to-text-edit.html"
-                                                        ><button
-                                                            type="button"
-                                                            class="btn btn-success waves-effect waves-light"
-                                                        >
-                                                            Edit Text
-                                                        </button></a
-                                                    >
-                                                </div>
+                                                <h4>
+                                                    <i
+                                                        class="fe-arrow-up text-success mr-1"
+                                                    ></i
+                                                    >85
+                                                </h4>
+                                            </div>
+                                            <div class="col-4">
+                                                <p
+                                                    class="text-muted font-15 mb-1 text-truncate"
+                                                >
+                                                    Sedang
+                                                </p>
+                                                <h4>
+                                                    <i
+                                                        class="fe-arrow-up text-success mr-1"
+                                                    ></i
+                                                    >75
+                                                </h4>
+                                            </div>
+                                            <div class="col-4">
+                                                <p
+                                                    class="text-muted font-15 mb-1 text-truncate"
+                                                >
+                                                    kurang
+                                                </p>
+                                                <h4>
+                                                    <i
+                                                        class="fe-arrow-down text-danger mr-1"
+                                                    ></i
+                                                    >40
+                                                </h4>
                                             </div>
                                         </div>
-                                        <!-- end col -->
-                                    </div>
-                                    <!-- end row -->
-                                    <br />
-
-                                    <h4 class="mb-3">Nilai</h4>
-                                    <div
-                                        class="table-responsive mt-4"
-                                        style="margin-top: 0.25rem !important"
-                                    >
-                                        <table
-                                            class="table table-bordered table-centered mb-0"
-                                        >
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th>1</th>
-                                                    <th>2</th>
-                                                    <th>3</th>
-                                                    <th>4</th>
-                                                    <th>5</th>
-                                                    <th>6</th>
-                                                    <th>7</th>
-                                                    <th>8</th>
-                                                    <th>9</th>
-                                                    <th>Akhir</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div style="margin-top: 20px">
-                                        <button
-                                            type="button"
-                                            class="btn btn-success waves-effect waves-light"
-                                            data-toggle="modal"
-                                            data-target="#con-close-modal"
-                                        >
-                                            Edit Nilai
-                                        </button>
                                     </div>
                                 </div>
-                                <!-- end card-->
+                                <!-- end card-box -->
+                            </div>
+                            <!-- end col-->
+                        </div>
+
+                        <!-- end row -->
+                        <div class="row">
+                            <div class="col-md-6 col-xl-6">
+                                <div class="widget-rounded-circle card-box">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div
+                                                class="avatar-lg rounded-circle bg-soft-info border-info border"
+                                            >
+                                                <i
+                                                    class="icon-user font-22 avatar-title text-info"
+                                                ></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h3 class="mt-1">
+                                                    <span
+                                                        data-plugin="counterup"
+                                                        >120</span
+                                                    >
+                                                </h3>
+                                                <p
+                                                    class="text-muted mb-1 text-truncate"
+                                                >
+                                                    Total Pelamar laki-laki
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end row-->
+                                </div>
+                                <!-- end widget-rounded-circle-->
+                            </div>
+                            <!-- end col-->
+
+                            <div class="col-md-6 col-xl-6">
+                                <div class="widget-rounded-circle card-box">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div
+                                                class="avatar-lg rounded-circle bg-soft-warning border-warning border"
+                                            >
+                                                <i
+                                                    class="icon-user-female font-22 avatar-title text-warning"
+                                                ></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h3 class="mt-1">
+                                                    <span
+                                                        data-plugin="counterup"
+                                                        >80</span
+                                                    >
+                                                </h3>
+                                                <p
+                                                    class="text-muted mb-1 text-truncate"
+                                                >
+                                                    Total pelamar Perempuan
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end row-->
+                                </div>
+                                <!-- end widget-rounded-circle-->
                             </div>
                             <!-- end col-->
                         </div>
                         <!-- end row-->
-
-                        <div
-                            id="con-close-modal"
-                            class="modal fade"
-                            tabindex="-1"
-                            role="dialog"
-                            aria-labelledby="myModalLabel"
-                            aria-hidden="true"
-                            style="display: none"
-                        >
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Edit Score</h4>
-                                        <button
-                                            type="button"
-                                            class="close"
-                                            data-dismiss="modal"
-                                            aria-hidden="true"
-                                        >
-                                            ×
-                                        </button>
-                                    </div>
-                                    <div class="modal-body p-4">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="control-label"
-                                                        >Insert Score between 0
-                                                        - 100</label
-                                                    >
-                                                    <input
-                                                        type="number"
-                                                        id="num"
-                                                        class="form-control"
-                                                        maxlength="3"
-                                                        min="0"
-                                                        max="100"
-                                                        onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button
-                                            type="button"
-                                            class="btn btn-secondary waves-effect"
-                                            data-dismiss="modal"
-                                        >
-                                            Cancel
-                                        </button>
-                                        <button
-                                            type="button"
-                                            class="btn btn-info waves-effect waves-light"
-                                        >
-                                            Save changes
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.modal -->
                     </div>
                     <!-- container -->
                 </div>
@@ -702,7 +666,20 @@
         <!-- Vendor js -->
         <script src="assets/js/vendor.min.js"></script>
 
-        <!-- App js -->
+        <!-- Plugins js-->
+        <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/libs/jquery-knob/jquery.knob.min.js"></script>
+        <script src="assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+        <script src="assets/libs/flot-charts/jquery.flot.js"></script>
+        <script src="assets/libs/flot-charts/jquery.flot.time.js"></script>
+        <script src="assets/libs/flot-charts/jquery.flot.tooltip.min.js"></script>
+        <script src="assets/libs/flot-charts/jquery.flot.selection.js"></script>
+        <script src="assets/libs/flot-charts/jquery.flot.crosshair.js"></script>
+
+        <!-- Dashboar 1 init js-->
+        <script src="assets/js/pages/dashboard-1.init.js"></script>
+
+        <!-- App js-->
         <script src="assets/js/app.min.js"></script>
     </body>
 </html>
